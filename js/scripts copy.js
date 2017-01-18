@@ -1,7 +1,7 @@
 ////////BE////////
 var userInput;
 var anslatortray =function(userInput){
-  // var userInput = prompt("userInput");
+  var userInput = prompt("userInput");
   var result = "atcay";
   var wordArray = userInput.split("");
   // alert("wordArray: " + wordArray);
