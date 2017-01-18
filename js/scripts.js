@@ -1,51 +1,74 @@
-////////BE////////
+// ////////BE////////
 var userInput;
+var wordArray = [];
+var firstVowel;
 var anslatortray =function(userInput){
   // var userInput = prompt("userInput");
   var result = "atcay";
-  var wordArray = userInput.split("");
-  // alert("wordArray: " + wordArray);
-  var firstVowel = wordArray.indexOf("a");
+  wordArray = userInput.split("");
+
+  firstVowel = wordArray.indexOf("a");
   if (firstVowel === 0) {
-    // result = userInput + "ay";
+    result = userInput + "ay";
   } else {
     var result = userInput;
   }
-    return userInput;
-}
+    return result;
+};
 
-// var cat=["c","a","t"]
-// cat.indexOf("a");
-
-
-
-
-
-
+// // var cat=["c","a","t"]
+// // cat.indexOf("a");
+//
 /////////UI/////////
 $(document).ready(function(){
-  alert("Blah");
+  // alert("Blah");
   $("#user-input").submit(function(event){
-
-    // var userInput = $("input#text-input").val();
-    // alert("userInput: " + userInput);
-    alert("wordArray: " + wordArray);
-    alert("firstVowel: " + firstVowel);
-
+    // var userInput = prompt("userInput");
+    var userInput = $("input#text-input").val();
+    alert("userInput: " + userInput);//debugging
     var userOutput = anslatortray(userInput);
     $("p#text-output").text(userOutput);
-    // alert("userOutput: " + userOutput);
+    alert("userOutput: " + userOutput);//debugging
+    alert("wordArray: " + wordArray);//debugging
+    alert("firstVowel: " + firstVowel);//debugging
     event.preventDefault();
   });
 
 
 
 
-
-
-
-
-
-
-
 });
+//
+//
+//
+//
+//
+// /////////UI/////////
+// $(document).ready(function(){
+//   alert("Blah");
+//   $("#user-input").submit(function(event){
+//
+//     var userInput = $("input#text-input").val();
+//     // alert("userInput: " + userInput);
+//     alert("wordArray: " + wordArray);
+//     alert("firstVowel: " + firstVowel);
+//
+//     var userOutput = anslatortray(userInput);
+//     $("p#text-output").text(userOutput);
+//     // alert("userOutput: " + userOutput);
+//     event.preventDefault();
+//   });
+//
+// });
+
+// ////////BE////////
+// var userInput;
+// var anslatortray =function(userInput){
+//   if (userInput === "a") {
+//     var result = userInput + "ay";
+//   }  else {
+//     result = userInput;
+//   }
+//   return result;
+// }
+//
