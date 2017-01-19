@@ -13,11 +13,11 @@ var anslatortray =function(userInput){
   wordArray = userInput.split("");
 
   if (wordArray[0] === "a" | wordArray[0] ==="e" | wordArray[0] === "i" | wordArray[0] === "o" | wordArray[0] === "u") {
-    return wordArray.push("ay");
+    pigArray = wordArray.push("ay");
   }
   else {
     do { var i = 0
-      if (wordArray[i] === "a" | wordArray[i] ==="e" | wordArray[i] === "i" | wordArray[i] === "o" | wordArray[i] === "u") {
+      if (wordArray[i] === "a" | wordArray[i] ==="e" | wordArray[i] === "i" | wordArray[i] === "o" |      wordArray[i] === "u") {
         thereIsVowel = true;
         pigArray = wordArray.push("ay")
       }
@@ -25,9 +25,9 @@ var anslatortray =function(userInput){
         i += 1;
       }
     }
-    while {
+    while (
       thereIsVowel === false
-    };
+    )
     consonant = wordArray.slice(0,i-1); /// slice from index 0 through where the first vowel was detected
     consonantString = consonant.join(""); /// make a string out of consonant
     consonantLength = i; /// consonant length is equal to the index where the vowel was detected
@@ -35,9 +35,9 @@ var anslatortray =function(userInput){
     remainderLength = remainder.length;  ///  take the remaining length of the array
     pigArray = wordArray.splice(remaniderLength,0,consonantString);    /// splice from remainderLength and add consonant in string form.
   }
-  else if {}
+
   // else if (wordArray[j] === "q" && wordArray[j+1] === "u") {
-  // 
+  //
   // }
 
   // // var userInput = prompt("userInput");
